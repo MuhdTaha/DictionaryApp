@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- RelativeLayout containing search views -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search word here"
+            android:layout_toLeftOf="@+id/searchBtn"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:background="@drawable/rounded_corner"
+            android:id="@+id/searchInput"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/searchBtn"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/rounded_button"
+            />
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/primary"
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <!-- TextViews below search views -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="word"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/lightblue"
+        android:id="@+id/wordTextView"
+        />
+
+    <TextView
+        android:id="@+id/phoneticTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        tools:text="/ t e s t /"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/meaningRecView"
+    />
+
+</LinearLayout>
